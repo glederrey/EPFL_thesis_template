@@ -1,0 +1,10 @@
+# Ignore all LaTeX produced files
+
+*.aux
+*.bbl
+*.blg
+*.lot
+*.lof
+*.log
+*.synctex.gz
+*.toc

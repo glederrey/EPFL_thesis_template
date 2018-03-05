@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%		My Thesis
+%
+%		EDOC Template
+%		2011
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{head/settings_epfl_template.tex}
+\input{head/settings_custom.tex}  % place your custom packages, etc... in this file!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% HEAD: Book-Begin
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt} %(needs to be before titlepage and frontmatter to keep the table of contents lists short)
+\frontmatter
+\input{head/titlepage.tex}
+\include{head/dedication}
+\include{head/acknowledgements}
+\include{head/preface}
+\include{head/abstracts}
+
+\cleardoublepage
+\pdfbookmark{\contentsname}{toc}
+\tableofcontents
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures} % adds an entry to the table of contents
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables} % adds an entry to the table of contents
+\listoftables
+% your list of symbols here, if needed.
+
+
+% space before each new paragraph according to the template guidelines.
+\setlength{\parskip}{1em}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% MAIN: The chapters of the thesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\include{main/ch1_introduction}
+\cleardoublepage
+\part{Body 1}
+\include{main/ch2_figures_tables}
+\cleardoublepage
+\part{Body 2}
+\include{main/ch3_math}
+\include{main/ch4_more_text}
+
+% use to end the last part if the thesis is composed of parts
+\addtocontents{toc}{\vspace{\normalbaselineskip}}
+\cleardoublepage
+\bookmarksetup{startatroot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% TAIL: Bibliography, Appendix, CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{tail/appendix}
+\include{tail/biblio}
+% Add your glossary here
+% Add your index here
+% Photographic credits (list of pictures&images that have been used with names of the person holding the copyright for them)
+\include{tail/cv}
+
+\end{document}
