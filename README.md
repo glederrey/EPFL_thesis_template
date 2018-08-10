@@ -29,7 +29,7 @@ The template chapter header styles are unfortunately not (yet) compatible with t
 **The compilation fails with the error message "! pdfTeX error (font expansion): auto expansion is only possible with scalable fonts**
 > This error stems from an incompatibility of your system with the font used for the titlepage. We might change this for the whole template design soon, but in the mean time, just open "head/titlepage.tex" -&gt; go to line 4 and put the line in comment by adding a "%" in front of the line such that it reads "%\sffamily". After this the compilation should work.
 >
-> Another solution to this fix (for Windows especially) is the following:
+> Another solution to this problem (tested on Windows 10) is the following:
 >  1. Start "MiKTeX Settings (Admin)"
 >  2. Press "Refresh FNDB"
 >  3. Press "Update Formats"
