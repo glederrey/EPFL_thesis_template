@@ -1,10 +1,10 @@
 # Template for the EPFL PhD thesis
 
-Welcome to the **unofficial** template for the EPFL PhD thesis. Before starting to write your thesis, have a look at this page: [https://phd.epfl.ch/version_finale](https://phd.epfl.ch/version_finale). It will give you all mandatory information concerning your thesis. It is therefore not required for you to use this template. It's only here to help you and remove the struggle to create your own template. 
+Welcome to the **unofficial** template for the EPFL PhD thesis. Before starting to write your thesis, have a look at this page: [https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-fin-de-these/](https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-fin-de-these/). It will give you all mandatory information concerning your thesis. It is also not required for you to use this template. It's only here to help you and remove the struggle to create your own template. 
 
 If you are using this template and improved it, if you have suggestions to improve it or if you have questions, feel free to contact me: [gael.lederrey@epfl.ch](mailto:gael.lederrey@epfl.ch). You can also contact [PolyDoc](mailto:polydoc@epfl.ch), the PhD students association from EPFL, or visit their [website](http://polydoc.epfl.ch) if you have more general questions.
 
-If you are looking for other templates in Word or from different universities, feel free to visit this page: [https://phd.epfl.ch/modelesthese](https://phd.epfl.ch/modelesthese). 
+If you are looking for other templates in Word or from different universities, feel free to visit this page: [https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-fin-de-these/](https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-fin-de-these/). At the end of the page, you will find a generic Word template.
 
 > **WARNING**: These templates are not maintained. However, if you modify it, feel free to send it to PolyDoc and we will replace them.
 
