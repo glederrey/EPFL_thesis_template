@@ -16,23 +16,29 @@
 %%%%% HEAD: Book-Begin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt} %(needs to be before titlepage and frontmatter to keep the table of contents lists short)
 \frontmatter
 \input{head/titlepage.tex}
 \include{head/dedication}
 \setcounter{page}{0}
-\input{head/acknowledgements}
+\include{head/acknowledgements}
 \include{head/preface}
 \include{head/abstracts}
 
-\tableofcontents
 \cleardoublepage
+\pdfbookmark{\contentsname}{toc}
+\tableofcontents
+
 % % Following content is OPTIONAL (List of figures + tables)
-% \phantomsection
-% \addcontentsline{toc}{chapter}{List of figures} % adds an entry to the table of contents
-% \listoffigures
 % \cleardoublepage
 % \phantomsection
-% \addcontentsline{toc}{chapter}{List of tables} % adds an entry to the table of contents
+% \addcontentsline{toc}{chapter}{List of Figures} % adds an entry to the table of contents
+% \listoffigures
+% 
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{List of Tables} % adds an entry to the table of contents
 % \listoftables
 % your list of symbols here, if needed.
 
@@ -47,10 +53,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 \include{main/ch1_introduction}
+\cleardoublepage
+\part{Body 1}
 \include{main/ch2_figures_tables}
+\cleardoublepage
+\part{Body 2}
 \include{main/ch3_math}
 \include{main/ch4_more_text}
 
+% use to end the last part if the thesis is composed of parts
+\addtocontents{toc}{\vspace{\normalbaselineskip}}
+\cleardoublepage
+\bookmarksetup{startatroot}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% TAIL: Bibliography, Appendix, CV
