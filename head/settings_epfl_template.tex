@@ -6,17 +6,38 @@
 %		2011
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,11pt,fleqn]{book}
+\documentclass[a4paper,11pt]{book}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+% % Uncomment for bibliography
+% % Bibliography using Biblatex
+%\usepackage{doi}
+%\usepackage[autostyle]{csquotes}
+% \usepackage[
+%     backend=biber,
+%     style=authoryear,
+%     natbib=true,
+%     firstinits=true,
+%     sortlocale=en_US,
+%     url=false, 
+%     doi=true,
+%     eprint=false,
+%     isbn=false
+% ]{biblatex}
+%\addbibresource{tail/bibliography.bib}
+% % OR Bibliography management for Bibtex 
+% Load natbib before babel
+\usepackage[round]{natbib}
+
+
 \usepackage[french,german,english]{babel}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% EDOC THESIS TEMPLATE: Variant 1.0 -> Latin modern, large text width&height
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{lmodern}
+\usepackage{lmodern} % use this to fix blurry typewriter text font
 %\usepackage[a4paper,top=22mm,bottom=28mm,inner=35mm,outer=25mm]{geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -159,3 +180,19 @@
    \gdef\partlabel{}
   } % code before the title body
 \titlespacing*{\part}{11.06cm}{26.4pt-\parskip-\parskip}{0pt}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+% Fix the problem with delimiter size caused by fourier and amsmath packages.
+\makeatletter
+\def\resetMathstrut@{%
+  \setbox\z@\hbox{%
+    \mathchardef\@tempa\mathcode`\(\relax
+      \def\@tempb##1"##2##3{\the\textfont"##3\char"}%
+      \expandafter\@tempb\meaning\@tempa \relax
+  }%
+  \ht\Mathstrutbox@1.2\ht\z@ \dp\Mathstrutbox@1.2\dp\z@
+}
+\makeatother

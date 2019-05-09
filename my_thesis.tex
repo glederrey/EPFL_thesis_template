@@ -21,6 +21,7 @@
 \frontmatter
 \input{head/titlepage.tex}
 \include{head/dedication}
+\setcounter{page}{0}
 \include{head/acknowledgements}
 \include{head/preface}
 \include{head/abstracts}
@@ -29,19 +30,21 @@
 \pdfbookmark{\contentsname}{toc}
 \tableofcontents
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures} % adds an entry to the table of contents
-\listoffigures
-
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables} % adds an entry to the table of contents
-\listoftables
+% % Following content is OPTIONAL (List of figures + tables)
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{List of Figures} % adds an entry to the table of contents
+% \listoffigures
+% 
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{List of Tables} % adds an entry to the table of contents
+% \listoftables
 % your list of symbols here, if needed.
 
 
 % space before each new paragraph according to the template guidelines.
+%(needs to be after titlepage and frontmatter to keep the table of contents lists short)
 \setlength{\parskip}{1em}
 
 
@@ -67,6 +70,7 @@
 %%%%% TAIL: Bibliography, Appendix, CV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{tail/appendix}
+\backmatter
 \include{tail/biblio}
 % Add your glossary here
 % Add your index here
