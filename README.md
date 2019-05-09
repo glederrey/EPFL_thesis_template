@@ -41,4 +41,5 @@ The template chapter header styles are unfortunately not (yet) compatible with t
 
 * ??? (Original creator)
 * Diogo Rodrigues (Fixed latex -> dvips -> ps2pdf version + other minor problems)
-* Mahdi Khoramshahhi (Added a fix for the bug on the font expansion) [**current version**]
+* Mahdi Khoramshahhi (Added a fix for the bug on the font expansion) 
+* Léo Belzile (Changed the logo, tidy up the code, fixed some bugs) [**current version**]
