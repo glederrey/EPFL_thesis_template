@@ -6,17 +6,38 @@
 %		2011
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,11pt,fleqn]{book}
+\documentclass[a4paper,11pt]{book}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+% % Uncomment for bibliography
+% % Bibliography using Biblatex
+%\usepackage{doi}
+%\usepackage[autostyle]{csquotes}
+% \usepackage[
+%     backend=biber,
+%     style=authoryear,
+%     natbib=true,
+%     firstinits=true,
+%     sortlocale=en_US,
+%     url=false, 
+%     doi=true,
+%     eprint=false,
+%     isbn=false
+% ]{biblatex}
+%\addbibresource{tail/bibliography.bib}
+% % OR Bibliography management for Bibtex 
+% Load natbib before babel
+\usepackage[round]{natbib}
+
+
 \usepackage[french,german,english]{babel}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% EDOC THESIS TEMPLATE: Variant 1.0 -> Latin modern, large text width&height
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{lmodern}
+\usepackage{lmodern}
 %\usepackage[a4paper,top=22mm,bottom=28mm,inner=35mm,outer=25mm]{geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -35,6 +56,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+\setlength{\parindent}{0pt}
+
 \usepackage{setspace} % increase interline spacing slightly
 \setstretch{1.1}
 
@@ -50,7 +74,7 @@
 \usepackage{booktabs}
 \usepackage{lipsum}
 \usepackage{microtype}
-\usepackage{url}
+\usepackage[final]{pdfpages}
 
 \usepackage{fancyhdr}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
@@ -83,20 +107,6 @@
 	citecolor=black,
 	urlcolor=black}
 \urlstyle{same}
-\ifpdf
-\usepackage[final]{pdfpages}
-\else
-\usepackage{calc}
-\usepackage{breakurl}
-\usepackage[nlwarning=false]{hypdvips}
-\usepackage{backref}
-\renewcommand*{\backref}[1]{}
-\fi
-\usepackage{bookmark}
-
-\makeatletter
-\renewcommand\@pnumwidth{20pt}
-\makeatother
 
 \makeatletter
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
@@ -122,20 +132,19 @@
       {\begin{tikzpicture}[remember picture, overlay]
         \draw[fill=black] (0,0) rectangle(35.5mm,15mm);
         \node[anchor=north east,yshift=-7.2cm,xshift=34mm,minimum height=30mm,inner sep=0mm] at (current page.north west)
-        {\parbox[top][30mm][t]{15mm}{\raggedleft \rule{0cm}{0.6cm}\color{white}\chapterlabel}};  %the empty rule is just to get better base-line alignment
+        {\parbox[top][30mm][t]{15mm}{\raggedleft $\phantom{\textrm{l}}$\color{white}\chapterlabel}};  %the black l is just to get better base-line alingement
         \node[anchor=north west,yshift=-7.2cm,xshift=37mm,text width=\textwidth,minimum height=30mm,inner sep=0mm] at (current page.north west)
-              {\parbox[top][30mm][t]{\textwidth}{\rule{0cm}{0.6cm}\color{black}#1}};
+              {\parbox[top][30mm][t]{\textwidth}{\color{black}#1}};
        \end{tikzpicture}
       };
    \end{tikzpicture}
    \gdef\chapterlabel{}
   } % code before the title body
-\titlespacing*{name=\chapter,numberless}{-3.7cm}{83.2pt-\parskip}{-3.2pt+\parskip}
-\titlespacing*{\chapter}{-3.7cm}{50pt-\parskip-\parskip}{30pt+\parskip+\parskip}
-\titlespacing*{\section}{0pt}{13.2pt}{1em-\parskip}  % 13.2pt is line spacing for a text with 11pt font size
-\titlespacing*{\subsection}{0pt}{13.2pt}{1em-\parskip}
-\titlespacing*{\subsubsection}{0pt}{13.2pt}{1em-\parskip}
-\titlespacing*{\paragraph}{0pt}{13.2pt}{1em-\parskip}
+
+\titlespacing*{\chapter}{0pt}{50pt}{30pt}
+\titlespacing*{\section}{0pt}{13.2pt}{*0}  % 13.2pt is line spacing for a text with 11pt font size
+\titlespacing*{\subsection}{0pt}{13.2pt}{*0}
+\titlespacing*{\subsubsection}{0pt}{13.2pt}{*0}
 
 \newcounter{myparts}
 \newcommand*\partlabel{}
@@ -143,19 +152,35 @@
 	{\normalfont\bfseries\Huge} % format of the part
 	{\gdef\partlabel{\thepart\ }}     % the label 
  	{0pt} % separation between label and part-title
- 	  {\ifpdf\setlength{\unitlength}{20mm}\else\setlength{\unitlength}{0mm}\fi
+ 	  {\setlength{\unitlength}{20mm}
 	  \addtocounter{myparts}{1}
 	  \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north west,xshift=-65mm,yshift=-6.9cm-\value{myparts}*20mm] at (current page.north east) % for unknown reasons: 3mm missing -> 65 instead of 62
       {\begin{tikzpicture}[remember picture, overlay]
         \draw[fill=black] (0,0) rectangle(62mm,20mm);   % -\value{myparts}\unitlength
-        \node[anchor=north west,yshift=-6.1cm-\value{myparts}*\unitlength,xshift=-60.5mm,minimum height=30mm,inner sep=0mm] at (current page.north east)
-        {\parbox[top][30mm][t]{55mm}{\raggedright \color{white}Part \partlabel \rule{0cm}{0.6cm}}};  %the empty rule is just to get better base-line alignment
-        \node[anchor=north east,yshift=-6.1cm-\value{myparts}*\unitlength,xshift=-63.5mm,text width=\textwidth,minimum height=30mm,inner sep=0mm] at (current page.north east)
-              {\parbox[top][30mm][t]{\textwidth}{\raggedleft \rule{0cm}{0.6cm}\color{black}#1}};
+        \node[anchor=north west,yshift=-6.1cm-\value{myparts}*20mm,xshift=-60.5mm,minimum height=30mm,inner sep=0mm] at (current page.north east)
+        {\parbox[top][30mm][t]{55mm}{\raggedright \color{white}Part \partlabel $\phantom{\textrm{l}}$}};  %the phantom l is just to get better base-line alingement
+        \node[anchor=north east,yshift=-6.1cm-\value{myparts}*20mm,xshift=-63.5mm,text width=\textwidth,minimum height=30mm,inner sep=0mm] at (current page.north east)
+              {\parbox[top][30mm][t]{\textwidth}{\raggedleft \color{black}#1}};
        \end{tikzpicture}
       };
    \end{tikzpicture}
    \gdef\partlabel{}
   } % code before the title body
-\titlespacing*{\part}{11.06cm}{26.4pt-\parskip-\parskip}{0pt}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+% Fix the problem with delimiter size caused by fourier and amsmath packages.
+\makeatletter
+\def\resetMathstrut@{%
+  \setbox\z@\hbox{%
+    \mathchardef\@tempa\mathcode`\(\relax
+      \def\@tempb##1"##2##3{\the\textfont"##3\char"}%
+      \expandafter\@tempb\meaning\@tempa \relax
+  }%
+  \ht\Mathstrutbox@1.2\ht\z@ \dp\Mathstrutbox@1.2\dp\z@
+}
+\makeatother
+

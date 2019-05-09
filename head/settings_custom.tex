@@ -7,14 +7,22 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%
-%   Use this file for your own custom packages, command-definitions, etc...
-%
-
-
-% the following lines are for creating a simplified TO-DO box. However since boites is not per default installed with all latex-distributions, we have removed this example again
-% if you want to use it and do not have "boites" installed, you can get it from here: http://www.ctan.org/tex-archive/macros/latex/contrib/boites
-%
-%\usepackage{boites,boites_exemples}
-%\newcommand{\todolist}[1]{\begin{boiteepaisseavecuntitre}{TO DO in this chapter} #1 \end{boiteepaisseavecuntitre}}  % creates a little box
-% %\newcommand{\todolist}[1]{}  % to be used when to do is not to be printed
+% %
+% %   Use this file for your own custom packages, command-definitions, etc...
+% %
+% % 
+% % Packages for references - cleverref must be last
+% \usepackage{nameref}
+% \usepackage{hyperref}
+% \usepackage{cleveref}
+% \usepackage[shortlabels]{enumitem}
+% % Reduce spacing in bibliography
+% \setlength{\bibsep}{0pt plus 0.3ex}
+% % Allow equations to break between pages
+% \allowdisplaybreaks
+% % Penalty for widow and orphan
+% \widowpenalty=9999
+% \clubpenalty=9999
+% %Penalty for relation and binary operation breaks in equations
+% \relpenalty=9999
+% \binoppenalty=9999
