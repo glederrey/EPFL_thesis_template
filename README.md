@@ -2,7 +2,7 @@
 
 Welcome to the **unofficial** template for the EPFL PhD thesis. Before starting to write your thesis, have a look at this page: [https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/](https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/). It will give you all mandatory information concerning your thesis. It is also not required for you to use this template. It's only here to help you and remove the struggle to create your own template. 
 
-Mathias Payer also has a similar template in a revised form that can be used as well: [https://github.com/HexHive/thesis_template](https://github.com/HexHive/thesis_template)  
+Mathias Payer also has a similar template in a revised form that can be used as well: [https://github.com/HexHive/thesis_template](https://github.com/HexHive/thesis_template).
 
 If you are using this template and improved it, if you have suggestions to improve it or if you have questions, feel free to contact me: [gael.lederrey@epfl.ch](mailto:gael.lederrey@epfl.ch). You can also contact [PolyDoc](mailto:polydoc@epfl.ch), the PhD students association from EPFL, or visit their [website](http://polydoc.epfl.ch) if you have more general questions.
 
