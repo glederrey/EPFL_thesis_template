@@ -5,13 +5,9 @@ Welcome to the **unofficial** template for the EPFL PhD thesis. Before starting 
 Other versions of the template:
 - Mathias Payer: [https://github.com/HexHive/thesis_template](https://github.com/HexHive/thesis_template).
 
-If you are using this template and improved it, if you have suggestions to improve it or if you have questions, feel free to contact me: [gael.lederrey@epfl.ch](mailto:gael.lederrey@epfl.ch). You can also contact [PolyDoc](mailto:polydoc@epfl.ch), the PhD students association from EPFL, or visit their [website](http://polydoc.epfl.ch) if you have more general questions.
+If you are using this template and improved it, if you have suggestions to improve it or if you have questions, feel free to contact me: [glederre@gmail.com](mailto:glederre@gmail.com). You can also contact [PolyDoc](mailto:polydoc@epfl.ch), the PhD students association from EPFL, or visit their [website](http://polydoc.epfl.ch) if you have more general questions.
 
-If you are looking for other templates in Word or from different universities, feel free to visit this page: [https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/](https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/). At the end of the page, under the collapse button named *Any thesis template available*, you will find a generic Word template.
-
-> **WARNING**: These templates are not maintained. However, if you modify it, feel free to send it to PolyDoc and we will replace them.
-
-And if you created another template and want to share it with other PhD students from EPFL, feel free to contact PolyDoc and we'll see what we can do. 
+If you created another template and want to share it with other PhD students from EPFL, feel free to contact PolyDoc and we'll see what we can do. 
 
 ## FAQ 
 
