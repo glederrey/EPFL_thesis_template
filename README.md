@@ -5,11 +5,16 @@ Welcome to the **unofficial** template for the EPFL PhD thesis. Before starting 
 Other versions of the template:
 - Mathias Payer: [https://github.com/HexHive/thesis_template](https://github.com/HexHive/thesis_template).
 
+The template has been tested and validated on Overleaf as of the 25th of September 2025.
+
 If you are using this template and improved it, if you have suggestions to improve it or if you have questions, feel free to contact me: [glederre@gmail.com](mailto:glederre@gmail.com). You can also contact [PolyDoc](mailto:polydoc@epfl.ch), the PhD students association from EPFL, or visit their [website](http://polydoc.epfl.ch) if you have more general questions.
 
 If you created another template and want to share it with other PhD students from EPFL, feel free to contact PolyDoc and we'll see what we can do. 
 
 ## FAQ 
+
+**Does the template work on Overleaf?**
+> Yes, it does with the following settings: - Compiler: pdfLaTeX - TeX Live version: 2025. (Tested on the 25th of September 2025) Just do not forget to set the main document as my_thesis.tex. If you encounter errors while you did not change anything in the template, it's most likely due to overleaf trying to compile another file. 
 
 **The compilation fails: it says "LaTeX Error: Unknown option `explicit` for package `titlesec`**
 > The package titlesec has been modified in 2007 to include an option which allows more customization of the chapter titles. This template relies heavily on this option. In order to resolve this, you need to update to a more recent version (either your full Latex-Distribution or at least the titlesec package).
@@ -41,4 +46,5 @@ The template chapter header styles are unfortunately not (yet) compatible with t
 * ??? (Original creator)
 * Diogo Rodrigues (Fixed latex -> dvips -> ps2pdf version + other minor problems)
 * Mahdi Khoramshahhi (Added a fix for the bug on the font expansion) 
-* Léo Belzile (Changed the logo, tidy up the code, fixed some bugs) [**current version**]
+* Léo Belzile (Changed the logo, tidy up the code, fixed some bugs)
+* Gael Lederrey (Reworked the structure based on comments) [**current version**]
