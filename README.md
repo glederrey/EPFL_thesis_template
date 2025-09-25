@@ -1,50 +1,146 @@
-# Template for the EPFL PhD thesis
+# EPFL PhD Thesis Template
 
-Welcome to the **unofficial** template for the EPFL PhD thesis. Before starting to write your thesis, have a look at this page: [https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/](https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/). It will give you all mandatory information concerning your thesis. It is also not required for you to use this template. It's only here to help you and remove the struggle to create your own template. 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![LaTeX](https://img.shields.io/badge/LaTeX-Template-blue.svg)](https://www.latex-project.org/)
+[![Overleaf](https://img.shields.io/badge/Overleaf-Compatible-green.svg)](https://www.overleaf.com/)
 
-Other versions of the template:
-- Mathias Payer: [https://github.com/HexHive/thesis_template](https://github.com/HexHive/thesis_template).
+An **unofficial** LaTeX template for EPFL PhD theses.
 
-The template has been tested and validated on Overleaf as of the 25th of September 2025.
+## 🚀 Quick Start
 
-If you are using this template and improved it, if you have suggestions to improve it or if you have questions, feel free to contact me: [glederre@gmail.com](mailto:glederre@gmail.com). You can also contact [PolyDoc](mailto:polydoc@epfl.ch), the PhD students association from EPFL, or visit their [website](http://polydoc.epfl.ch) if you have more general questions.
+### Using Overleaf (Recommended)
 
-If you created another template and want to share it with other PhD students from EPFL, feel free to contact PolyDoc and we'll see what we can do. 
+**Option 1: Direct Upload**
+1. Download this repository as a ZIP file
+2. Upload to [Overleaf](https://www.overleaf.com/)
+3. Set compiler to **pdfLaTeX** and TeX Live version to **2025**
+4. Set `my_thesis.tex` as the main document
+5. Start writing your thesis!
 
-## FAQ 
+**Option 2: GitHub Integration (Recommended for version control)**
+1. Fork this repository or create a new repository using this template
+2. In Overleaf, create a new project and select "Import from GitHub"
+3. Connect your GitHub account and select your thesis repository
+4. Set compiler to **pdfLaTeX** and TeX Live version to **2025**
+5. Set `my_thesis.tex` as the main document
+6. Enable sync to keep your GitHub repo and Overleaf project synchronized
 
-**Does the template work on Overleaf?**
-> Yes, it does with the following settings: - Compiler: pdfLaTeX - TeX Live version: 2025. (Tested on the 25th of September 2025) Just do not forget to set the main document as my_thesis.tex. If you encounter errors while you did not change anything in the template, it's most likely due to overleaf trying to compile another file. 
+> **💡 Tip**: Using GitHub integration allows you to maintain version control, collaborate with supervisors, and have a backup of your work outside Overleaf.
 
-**The compilation fails: it says "LaTeX Error: Unknown option `explicit` for package `titlesec`**
-> The package titlesec has been modified in 2007 to include an option which allows more customization of the chapter titles. This template relies heavily on this option. In order to resolve this, you need to update to a more recent version (either your full Latex-Distribution or at least the titlesec package).
+### Local Installation
+1. Clone this repository: `git clone https://github.com/glederrey/EPFL_thesis_template.git`
+2. Ensure you have a recent LaTeX distribution (TeX Live 2020+ recommended)
+3. Compile with: `pdflatex my_thesis.tex`
 
-**I have a problem with special characters, the compilation fails as soon as there is a special character in my file**
-> For best cross-platform compatibility, the template is configured for "UTF-8" input encoding instead of platform specific encodings (such as "Western-Latin for Mac"). In your Latex-Editor, be sure that the files are saved with this encoding.
-(In TeX-Shop for Mac: Preferences -&gt; Source-Code -&gt; Encoding -&gt; "UTF-8". You'll need to re-open and save the files in order to make the change happen).
+## 📁 Repository Structure
 
-**I'm using "mhchem" for typesetting chemical formula and there is a bug in the compilation**
-> This package is under active development: it has been updated on 2011/06/03 to version 3.11 correcting for an incompatibilty with some font-related packages. Please update your Latex-distribution to this latest version of mhchem by downloading the newest version from CTAN and replacing your existing mhchem.sty file by the newer version.
+```
+EPFL_thesis_template/
+├── my_thesis.tex                      # Main document file
+├── my_thesis.pdf                      # Example output
+├── settings/
+│   ├── settings_epfl_template.tex     # Core template settings
+│   └── settings_custom.tex            # Your custom packages/settings
+├── content/
+│   ├── head/                          # Front matter
+│   │   ├── titlepage.tex              # Title page (auto-generated)
+│   │   ├── dedication.tex             # Dedication page
+│   │   ├── acknowledgements.tex
+│   │   ├── preface.tex
+│   │   └── abstracts.tex              # English & French abstracts
+│   ├── ch1/                           # Chapter 1
+│   │   └── introduction.tex
+│   ├── ch2/                           # Chapter 2 (example with figures/tables)
+│   │   └── figures_tables.tex
+│   ├── ch3/                           # Chapter 3 (example with math)
+│   │   └── math.tex
+│   ├── ch4/                           # Chapter 4
+│   │   └── more_text.tex
+│   └── tail/                          # Back matter
+│       ├── appendix.tex
+│       ├── biblio.tex                 # Bibliography
+│       └── cv.tex                     # Curriculum Vitae
+├── assets/                            # Images and figures
+├── utopia_font/                       # Custom font files
+└── .gitignore
+```
 
-**I want to use Tex+dvi for compiling my files, because I have a lot of .eps graphics and I don't want to convert all of them and use pdftex for compiling my files**
-> Never mind for the .eps files: the pdftex compiler is able to convert them automatically to .pdf files. In some configurations you will not even need to do anything besides specifying the full graphic-file-names (ex: "mybeautifuleps.eps"). If this fails, you can still include the [epstopdf](https://ctan.org/pkg/epstopdf?lang=en) package manually.
-The template chapter header styles are unfortunately not (yet) compatible with tex+dvi compilation, so there is really no way around the pdftex compiler at the very moment if you want to use this template.
+## 📝 Getting Started with Your Thesis
 
-**The compilation fails with the error message "! pdfTeX error (font expansion): auto expansion is only possible with scalable fonts**
-> This error stems from an incompatibility of your system with the font used for the titlepage. We might change this for the whole template design soon, but in the mean time, just open "head/titlepage.tex" -&gt; go to line 4 and put the line in comment by adding a "%" in front of the line such that it reads "%\sffamily". After this the compilation should work.
->
-> Another solution to this problem (tested on Windows 10) is the following:
->  1. Start "MiKTeX Settings (Admin)"
->  2. Press "Refresh FNDB"
->  3. Press "Update Formats"
->  4. Press "OK" (to close the app)
->  5. Clean auxiliary files (.aux and .out)
->  6. Recompile and everything should work.
+### 1. Essential Information
+Before starting, review the [official EPFL thesis guidelines](https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/) for mandatory requirements.
 
-## Contributors
+### 2. Customization
+- **Personal Info**: Edit `content/head/titlepage.tex` for your thesis details
+- **Custom Packages**: Add your packages to `settings/settings_custom.tex`
+- **Content**: Replace example chapters in `content/ch*/` with your own
+- **Bibliography**: Update `content/tail/biblio.tex` with your references
 
-* ??? (Original creator)
-* Diogo Rodrigues (Fixed latex -> dvips -> ps2pdf version + other minor problems)
-* Mahdi Khoramshahhi (Added a fix for the bug on the font expansion) 
-* Léo Belzile (Changed the logo, tidy up the code, fixed some bugs)
-* Gael Lederrey (Reworked the structure based on comments) [**current version**]
+### 3. Writing Tips
+- Each chapter should be in its own folder under `content/`
+- Use `\input{}` commands to include your chapter files
+- Place figures in a separate folder inside each chapter folder, as shown in `content/ch2`
+- The template automatically handles page numbering and formatting
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**❌ "LaTeX Error: Unknown option `explicit` for package `titlesec`"**
+- **Solution**: Update your LaTeX distribution or the `titlesec` package to version 2007 or later
+
+**❌ "pdfTeX error (font expansion): auto expansion is only possible with scalable fonts"**
+- **Solution 1**: Comment out line 4 in `content/head/titlepage.tex` by adding `%` before `\sffamily`
+- **Solution 2** (Windows): Update MiKTeX fonts:
+  1. Open "MiKTeX Settings (Admin)"
+  2. Press "Refresh FNDB" → "Update Formats" → "OK"
+  3. Clean auxiliary files and recompile
+
+**❌ Special characters causing compilation errors**
+- **Solution**: Ensure all files are saved with UTF-8 encoding
+- **TeX-Shop (Mac)**: Preferences → Source-Code → Encoding → "UTF-8"
+
+**❌ Chemistry formulas with `mhchem` package**
+- **Solution**: Update `mhchem` to version 3.11+ from [CTAN](https://ctan.org/pkg/mhchem)
+
+### Overleaf Specific
+- Always set `my_thesis.tex` as the main document
+- Use pdfLaTeX compiler with TeX Live 2025
+- If compilation fails unexpectedly, check that Overleaf isn't trying to compile a different file
+
+## 🤝 Contributing
+
+We welcome contributions! If you've improved the template or have suggestions:
+
+- **Email**: [glederre@gmail.com](mailto:glederre@gmail.com)
+- **PolyDoc**: [polydoc@epfl.ch](mailto:polydoc@epfl.ch) | [Website](http://polydoc.epfl.ch)
+- **Issues**: Open an issue on this repository
+- **Pull Requests**: Submit improvements via PR
+
+## 🏆 Contributors
+
+- **???** - Original creator
+- **Diogo Rodrigues** - Fixed LaTeX → dvips → ps2pdf version + minor fixes
+- **Mahdi Khoramshahhi** - Font expansion bug fix
+- **Léo Belzile** - Logo update, code cleanup, bug fixes
+- **Gael Lederrey** - Structure rework based on feedback, README upgraded [**current maintainer**]
+
+## 📚 Alternative Templates
+
+- [Mathias Payer's template](https://github.com/HexHive/thesis_template) - Alternative EPFL thesis template
+
+## 📄 License
+
+This template is released under the [MIT License](LICENSE). Feel free to use, modify, and distribute.
+
+## 🆘 Support
+
+- **General Questions**: Contact [PolyDoc](mailto:polydoc@epfl.ch)
+- **Template Issues**: Open an issue or email the maintainer
+- **EPFL Thesis Requirements**: Check the [official EPFL guidelines](https://www.epfl.ch/education/phd/regulations/internal-regulations/edoc-faq-end-of-thesis/)
+
+---
+
+**Note**: This is an unofficial template. While it follows EPFL guidelines, always verify compliance with current requirements before submission.
+
+*Last updated: September 2025*
