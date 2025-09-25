@@ -123,6 +123,7 @@ We welcome contributions! If you've improved the template or have suggestions:
 - **Diogo Rodrigues** - Fixed LaTeX → dvips → ps2pdf version + minor fixes
 - **Mahdi Khoramshahhi** - Font expansion bug fix
 - **Léo Belzile** - Logo update, code cleanup, bug fixes
+- **Nicolas Tappy** - Fixed a bug in the headers
 - **Gael Lederrey** - Structure rework based on feedback, README upgraded [**current maintainer**]
 
 ## 📚 Alternative Templates
