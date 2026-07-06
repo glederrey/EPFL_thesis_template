@@ -125,6 +125,7 @@ We welcome contributions! If you've improved the template or have suggestions:
 - **Léo Belzile** - Logo update, code cleanup, bug fixes
 - **Nicolas Tappy** - Fixed a bug in the headers
 - **Gael Lederrey** - Structure rework based on feedback, README upgraded [**current maintainer**]
+- **Cesare Mattiroli** - Fixed a bug between babel and circuitikz
 
 ## 📚 Alternative Templates
 
